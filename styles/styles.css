@@ -1,0 +1,508 @@
+/* '-----------------------------------Public Styles-------------------------------- */
+
+/* //& Start customise the Scroll Bar */
+/*//' the width of the scroll bar*/
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+/*/
+/the Styles of the scroll bar body   */
+::-webkit-scrollbar-track {
+  background: rgb(246, 2, 2);
+  background: linear-gradient(
+    190deg,
+    rgba(246, 2, 2, 1) 13%,
+    rgba(145, 1, 1, 1) 29%,
+    rgba(0, 0, 0, 1) 52%,
+    rgba(53, 7, 63, 1) 70%,
+    rgba(14, 134, 83, 1) 90%
+  );
+}
+/*//' the Styles of the scroll bar Thumb*/
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 50px;
+  height: 15px;
+  background: rgb(246, 2, 2);
+  background: linear-gradient(
+    90deg,
+    rgb(255 253 253) 13%,
+    rgb(94 84 84) 52%,
+    rgb(130 28 31) 90%
+  );
+}
+/* //& End customise the Scroll Bar */
+
+/* //& Start Public Styles- */
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(../assets/Fonts/Source_Sans_3/static/SourceSans3-Regular.ttf);
+}
+ 
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/Fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Sevillana";
+  src: url(../assets/Fonts/Sevillana/Sevillana-Regular.ttf);
+}
+:root {
+  /* //>--------------------------Bg color of Sections */
+  --bgGray: #f1f1f1;
+  /* //>--------------------------colorOFheaders */
+  --mainHeadColor: #ff305b;
+  /* //>--------------------------colorOfNaveList */
+  --colorOfNaveList: #ffffff;
+  /* //>--------------------------mainWhite */
+  --mainWhite: #ffffff;
+  /* //>--------------------------colorOF "a" in testemonial  */
+  --secont-a-Color: #777777;
+  /* //>--------------------------bg color OF Footer */
+  --firstTextColor: #555555;
+  --secondTextColor: #333333;
+  --thirdTextColor: #333;
+  /* //>--------------------------bg color OF Footer */
+  --bgFooter: #333333;
+  /* //>--------------------------anchorHover */
+  --anchorHover: #ec2403;
+  /* //>--------------------------Fonts */
+  --font-roboto: "Roboto", "sans-serif";
+  --font-Source-Sans: "Source Sans Pro", "sans-serif";
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: black;
+  background-color: #8e4b4b1a;
+  font-size: 16px;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-Source-Sans);
+  font-weight: 700;
+}
+p {
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  color: inherit !important;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit !important;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  color: inherit !important;
+}
+.clr {
+  clear: both;
+}
+
+.child {
+  width: 25%;
+  height: 3500px;
+  margin: auto;
+  background-color: teal;
+}
+.headers {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  /* border-bottom: 1px solid #e5e5e5; */
+  border-bottom: 2px solid #5a3a3a;
+  padding: 40px 0;
+  margin: 0;
+}
+
+.section {
+  margin: 50px 0;
+}
+/* //& End Public Styles- */
+
+/* //' Side Nave */
+.sideNave {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -200px;
+  background-color: #111111;
+  padding: 5px;
+  width: 200px;
+  z-index: 999;
+}
+.sideNave .close {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px;
+  margin: 10px 0;
+  /* border: 2px solid red; */
+}
+.sideNave .close .btn-close {
+  cursor: pointer;
+}
+.sideNave .navLink {
+  padding: 5px;
+  margin: 20px 0;
+  /* border: 2px solid red; */
+}
+.sideNave .navLink ul {
+  /* border: 2px solid teal; */
+  padding: 0;
+}
+.sideNave .navLink ul li {
+  padding: 10px;
+  margin: 10px;
+  /* border: 2px solid tomato; */
+}
+.sideNave .navLink ul li a {
+  color: var(--mainWhite) !important;
+  transition: all 0.3s;
+  font-size: 18px;
+}
+
+.sideNave .navLink ul li a:hover {
+  color: #d62e3366 !important;
+}
+
+.navBtn {
+  position: absolute;
+  right: -55px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
+  font-size: 22px;
+  color: var(--mainWhite);
+  cursor: pointer;
+  /* border: red solid 1px; */
+}
+.navBtn i {
+  font-size: 35px;
+  /* color: black; */
+  background: rgb(246, 2, 2);
+  background: linear-gradient(
+    193deg,
+    rgba(246, 2, 2, 1) 13%,
+    rgba(0, 0, 0, 0.8679643732492998) 52%,
+    rgba(23, 14, 134, 0.8119419642857143) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* //' Start Home */
+.home {
+  background-image: url(../assets/images/party.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.overLay {
+  background-color: rgba(214, 46, 51, 0.6);
+  position: absolute;
+  inset: 0;
+}
+
+.home h1 {
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.letGO {
+  background: rgb(246, 2, 2);
+  background: linear-gradient(
+    193deg,
+    rgba(246, 2, 2, 1) 13%,
+    rgba(0, 0, 0, 0.8679643732492998) 52%,
+    rgba(23, 14, 134, 0.8119419642857143) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* //' End Home */
+
+/* //' Start Scedual */
+.secdual {
+  /* background-color: #333333; */
+  overflow: hidden;
+}
+
+.item {
+  margin: 0;
+  /* border-bottom: 1px solid #e5e5e5; */
+  border-bottom: 1px solid #5a3a3a;
+}
+.itemInner {
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.itemInner i {
+  position: absolute;
+  left: 35%;
+  font-size: 20px;
+}
+
+.item .subHeaders {
+  font-family: var(--font-roboto);
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.item p {
+  padding: 20px;
+  line-height: 2.2;
+  font-size: 22px;
+  display: none;
+}
+
+/* //' End Scedual */
+
+/* //' start Duration */
+.duration {
+  /* background-color: #333; */
+  /* margin: 70px; */
+  overflow: hidden;
+}
+.durationContent {
+  margin: 50px 0;
+  padding: 50px 0;
+}
+
+/* //& the manual Way */
+/* .sinlgeItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sinlgeItem .time {
+  font-size: 55px;
+  font-family: var(--font-Source-Sans);
+  font-weight: 800;
+}
+
+.sinlgeItem p {
+  font-size: 23px;
+  font-family: var(--font-roboto);
+  font-weight: 800;
+}
+
+.durationContent .dots {
+  font-size: 80px;
+  color: hsl(12, 85%, 54%);
+} */
+
+/* //& the Plugin  */
+#countdown {
+  /* background-color: teal; */
+  text-align: center;
+  /* margin: 50px 0; */
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#countdown > div {
+  /* border: 3px solid red; */
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* background-color: red; */
+}
+#countdown > div:first-child::after,
+#countdown > div:nth-child(2)::after,
+#countdown > div:nth-child(3)::after {
+  font-size: 80px;
+  color: hsl(12, 85%, 54%);
+  content: ":";
+  padding: 0 !important;
+  margin: 0 !important;
+  position: absolute;
+  top: 37%;
+  left: 91%;
+  transform: translateY(-50%);
+}
+
+#countdown .wrapper {
+  /* background-color: #f1f1f1; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+#countdown .wrapper .time {
+  font-size: 55px;
+  font-family: var(--font-Source-Sans);
+  font-weight: 800;
+}
+#countdown .wrapper .label {
+  font-size: 23px;
+  font-family: var(--font-roboto);
+  font-weight: 800;
+}
+#countdown h2{
+    font-family: var(--font-roboto);
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+ 
+ 
+/* //' End Duration */
+
+/* //' start contactUs */
+ 
+/* //' End contactUs */
+
+/* //' start Footer */
+.footer {
+  background-color: #000000;
+  overflow: auto;
+  padding: 25px 0;
+}
+
+.social {
+  /* background-color: teal; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 35px auto;
+}
+.social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.social a i {
+  color: var(--mainWhite) !important;
+  transition: all 0.5s;
+}
+.social a:hover i {
+  color: rgba(238, 78, 38, 0.836) !important;
+}
+
+.footerNav a {
+  font-size: 20px;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  cursor: pointer;
+
+  background: rgb(246, 2, 2);
+  background: linear-gradient(
+    281deg,
+    rgba(246, 2, 2, 1) 13%,
+    rgb(124 89 89 / 64%) 52%,
+    rgb(68 60 177) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s;
+}
+.footerNav a:hover {
+  transition: all 0.5s;
+  color: rgba(238, 78, 38, 0.836) !important;
+  -webkit-text-fill-color: rgba(238, 78, 38, 0.836) !important;
+}
+.copyRight {
+  font-size: 25px;
+  background: linear-gradient(
+    49deg,
+    rgb(255 0 0) 13%,
+    rgb(77 57 87) 52%,
+    rgb(60 124 177) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.copyRight i {
+  margin: 0 8px;
+}
+.byMe h4 {
+  background: linear-gradient(
+    49deg,
+    rgb(255 0 0) 13%,
+    rgb(77 57 87) 52%,
+    rgb(60 124 177) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
+}
+.byMe h4 a {
+  font-size: 28px;
+  font-family: "Sevillana";
+  font-weight: 700;
+  text-decoration: underline;
+  background: linear-gradient(
+    49deg,
+    rgb(255 0 0) 13%,
+    rgb(77 57 87) 52%,
+    rgb(60 124 177) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s;
+  margin: 0 10px;
+}
+.byMe h4 a:hover {
+  /* color: rgba(238, 78, 38, 0.836) !important; */
+  -webkit-text-fill-color: rgba(238, 78, 38, 0.836) !important;
+}
+.maySocial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 5px auto;
+}
+.maySocial a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.maySocial a i {
+  color: var(--mainWhite) !important;
+  transition: all 0.5s;
+}
+.maySocial a:hover i {
+  color: rgba(238, 78, 38, 0.836) !important;
+}
+
+/* //' End Footer */

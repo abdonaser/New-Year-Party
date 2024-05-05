@@ -1,0 +1,15 @@
+@media (min-width: 700px) and (max-width: 999.99px) {
+  .itemInner i {
+    left: 25%;
+  }
+}
+@media (max-width: 699.99px) {
+  .itemInner i {
+    left: 18%;
+  }
+  .item p {
+        padding: 10px;
+        line-height: 1.8;
+        font-size: 18px;
+  }
+}
