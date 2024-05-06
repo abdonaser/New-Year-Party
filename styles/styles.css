@@ -38,7 +38,7 @@
   font-family: "Source Sans Pro";
   src: url(../assets/Fonts/Source_Sans_3/static/SourceSans3-Regular.ttf);
 }
- 
+
 @font-face {
   font-family: "Roboto";
   src: url(../assets/Fonts/Roboto/Roboto-Regular.ttf);
@@ -71,7 +71,7 @@
   --font-Source-Sans: "Source Sans Pro", "sans-serif";
 }
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   margin: 0;
   padding: 0;
 }
@@ -80,6 +80,12 @@ body {
   background-color: #8e4b4b1a;
   font-size: 16px;
   font-weight: 400;
+}
+html body {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
 }
 h1,
 h2,
@@ -186,7 +192,7 @@ li {
   top: 50%;
   transform: translateY(-50%);
   padding: 5px;
-  font-size: 22px;
+  /* font-size: 22px; */
   color: var(--mainWhite);
   cursor: pointer;
   /* border: red solid 1px; */
@@ -226,11 +232,17 @@ li {
 }
 .letGO {
   background: rgb(246, 2, 2);
-  background: linear-gradient(
+  /* background: linear-gradient(
     193deg,
     rgba(246, 2, 2, 1) 13%,
     rgba(0, 0, 0, 0.8679643732492998) 52%,
     rgba(23, 14, 134, 0.8119419642857143) 90%
+  ); */
+  background: linear-gradient(
+    192deg,
+    rgba(246, 2, 2, 1) -8%,
+    rgba(0, 0, 0, 0.8679643732492998) 40%,
+    rgba(23, 14, 134, 0.8119419642857143) 84%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -246,7 +258,9 @@ li {
   /* background-color: #333333; */
   overflow: hidden;
 }
-
+.scedualItems {
+  padding: 15px;
+}
 .item {
   margin: 0;
   /* border-bottom: 1px solid #e5e5e5; */
@@ -271,6 +285,7 @@ li {
 }
 
 .item p {
+  text-align: center;
   padding: 20px;
   line-height: 2.2;
   font-size: 22px;
@@ -315,8 +330,12 @@ li {
 } */
 
 /* //& the Plugin  */
-#countdown {
+.duration {
   /* background-color: teal; */
+  max-width: 100%;
+  overflow: hidden;
+}
+#countdown {
   text-align: center;
   /* margin: 50px 0; */
   padding: 50px 0;
@@ -326,26 +345,26 @@ li {
 }
 
 #countdown > div {
-  /* border: 3px solid red; */
   display: flex;
   flex-flow: nowrap column;
   justify-content: center;
   align-items: center;
   position: relative;
-  /* background-color: red; */
+  max-width: 25%;
 }
 #countdown > div:first-child::after,
 #countdown > div:nth-child(2)::after,
 #countdown > div:nth-child(3)::after {
-  font-size: 80px;
+  font-size: 65px;
   color: hsl(12, 85%, 54%);
   content: ":";
   padding: 0 !important;
   margin: 0 !important;
   position: absolute;
   top: 37%;
-  left: 91%;
+  left: 85%;
   transform: translateY(-50%);
+  z-index: 9;
 }
 
 #countdown .wrapper {
@@ -354,30 +373,31 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 10px;
 }
 #countdown .wrapper .time {
   font-size: 55px;
+  /* font-size: 18px; */
   font-family: var(--font-Source-Sans);
   font-weight: 800;
 }
 #countdown .wrapper .label {
   font-size: 23px;
   font-family: var(--font-roboto);
+  /* font-family: var(--font-Source-Sans); */
   font-weight: 800;
 }
-#countdown h2{
-    font-family: var(--font-roboto);
+#countdown h2 {
+  font-family: var(--font-roboto);
   font-size: 38px;
   font-weight: 700;
   text-transform: capitalize;
 }
- 
- 
+
 /* //' End Duration */
 
 /* //' start contactUs */
- 
+
 /* //' End contactUs */
 
 /* //' start Footer */
@@ -386,13 +406,12 @@ li {
   overflow: auto;
   padding: 25px 0;
 }
-
 .social {
   /* background-color: teal; */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
+  /* width: fit-content; */
   margin: 35px auto;
 }
 .social a {

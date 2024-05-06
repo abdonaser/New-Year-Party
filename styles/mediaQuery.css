@@ -1,15 +1,275 @@
-@media (min-width: 700px) and (max-width: 999.99px) {
+/* @media (min-width: 700px) and (max-width: 999.99px) {
   .itemInner i {
     left: 25%;
   }
-}
-@media (max-width: 699.99px) {
+} */
+/* @media (max-width: 699.99px) {
   .itemInner i {
     left: 18%;
   }
   .item p {
-        padding: 10px;
-        line-height: 1.8;
-        font-size: 18px;
+    padding: 10px;
+    line-height: 1.8;
+    font-size: 18px;
   }
+} */
+
+@media (min-width: 0px) and (max-width: 250px) {
+  /* ! Public Styles */
+  .headers {
+    font-size: 32px;
+    letter-spacing: 5px;
+    padding: 25px 0;
+  }
+
+  /* ! nav section */
+  .navBtn {
+    right: -35px;
+  }
+  .navBtn i {
+    font-size: 23px;
+  }
+
+  /* ! Home section */
+  .home h1 {
+    margin: 5px 0;
+    font-size: 29px;
+  }
+  .letGO {
+    margin: 5px 0;
+    font-size: 22px;
+  }
+
+  /* ! Scedual section */
+
+  .scedualItems {
+    padding: 15px;
+  }
+  .item {
+    margin: 0;
+  }
+  .itemInner {
+    margin: 0;
+    padding: 10px;
+  }
+  .item .subHeaders {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px;
+    margin: 0;
+  }
+  .itemInner i {
+    left: 15%;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .item p {
+    padding: 5px 10px;
+    line-height: 1.1;
+    font-size: 13px;
+  }
+
+  /* ! Duration section */
+  #countdown {
+    text-align: center;
+    /* margin: 50px 0; */
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    gap: 18px;
+  }
+
+  #countdown > div {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: green; */
+    max-width: 20% !important;
+  }
+
+  #countdown > div:first-child::after,
+  #countdown > div:nth-child(2)::after,
+  #countdown > div:nth-child(3)::after {
+    font-size: 30px;
+    color: hsl(12, 85%, 54%);
+    content: ":";
+    padding: 0 !important;
+    margin: 0 !important;
+    position: absolute;
+    top: 35%;
+    left: 111%;
+    transform: translateY(-50%);
+    z-index: 9;
+  }
+  #countdown .wrapper {
+    padding: 0;
+  }
+  #countdown .wrapper .time {
+    font-size: 20px;
+    font-family: var(--font-Source-Sans);
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  #countdown .wrapper .label {
+    font-size: 16px;
+    /* font-family: var(--font-roboto); */
+    font-family: var(--font-Source-Sans);
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 251px) and (max-width: 576px) {
+  /* ! Public Styles */
+  .headers {
+    font-size: 35px;
+    letter-spacing: 5px;
+    padding: 25px 0;
+  }
+
+  /* ! nav section */
+  .navBtn {
+    right: -38px;
+  }
+  .navBtn i {
+    font-size: 27px;
+  }
+
+  /* ! Home section */
+  .home h1 {
+    margin: 5px 0;
+    font-size: 34px;
+  }
+  .letGO {
+    margin: 5px 0;
+    font-size: 27px;
+  }
+
+  /* ! Scedual section */
+
+  .scedualItems {
+    padding: 15px;
+  }
+  .item {
+    margin: 0;
+  }
+  .itemInner {
+    margin: 0;
+    padding: 10px;
+  }
+  .item .subHeaders {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 5px;
+    margin: 0;
+  }
+  .itemInner i {
+    left: 19%;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .item p {
+    padding: 5px 0 0 7px;
+    line-height: 1.1;
+    font-size: 13px;
+  }
+
+  /* ! Duration section */
+  #countdown {
+    text-align: center;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 25%; */
+  }
+
+  #countdown > div {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: green; */
+    max-width: 20% !important;
+  }
+
+  #countdown > div:first-child::after,
+  #countdown > div:nth-child(2)::after,
+  #countdown > div:nth-child(3)::after {
+    font-size: 30px;
+    color: hsl(12, 85%, 54%);
+    content: ":";
+    padding: 0 !important;
+    margin: 0 !important;
+    position: absolute;
+    top: 40%;
+    left: 135%;
+    transform: translateY(-50%);
+    z-index: 9;
+  }
+  #countdown .wrapper {
+    padding: 0;
+  }
+  #countdown .wrapper .time {
+    font-size: 21px;
+    font-family: var(--font-Source-Sans);
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  #countdown .wrapper .label {
+    font-size: 16px;
+    /* font-family: var(--font-roboto); */
+    font-family: var(--font-Source-Sans);
+    font-weight: 700;
+  }
+}
+@media (min-width: 251px) and (max-width: 350px) {
+ 
+  .navBtn {
+    right: -38px;
+  }
+  .navBtn i {
+    font-size: 25px;
+  }
+
+
+
+  #countdown > div:first-child::after,
+  #countdown > div:nth-child(2)::after,
+  #countdown > div:nth-child(3)::after {
+    font-size: 30px;
+    color: hsl(12, 85%, 54%);
+    content: ":";
+    padding: 0 !important;
+    margin: 0 !important;
+    position: absolute;
+    top: 42%;
+    left: 115%;
+    transform: translateY(-50%);
+    z-index: 9;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .itemInner i {
+    left: 18%;
+  }
+  .item p {
+    padding: 10px;
+    line-height: 1.8;
+    font-size: 18px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .itemInner i {
+    left: 25%;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
 }
